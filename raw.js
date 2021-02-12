@@ -4,6 +4,7 @@ Object.defineProperties(Array.prototype, {
 	// trim: { value: function () { return array.trim(this) } },
 
 	remove: { value: function (value) { return array.remove(this, value) } },
+	removeIndex: { value: function (value) { return array.removeIndex(this, value) } },
 	intersection: { value: function (other) { return array.intersection(this, other) } },
 
 	// union: { value: function (other) { return array.union(this, other) } },
@@ -16,7 +17,7 @@ Object.defineProperties(Array.prototype, {
 	unique: { get: function () { return array.unique(this) } },
 	clean: { get: function () { return array.clean(this) } },
 
-	
+
 	first: {
 		get: function () {
 			return this[0];

@@ -5,9 +5,14 @@
 // }
 
 export function remove(array, val) {
-	let index = array.indexOf(val)
-	if (index < 0) return array;
-	return [...array.slice(0, index), ...array.slice(index + 1)] // splice alters the source?
+	return removeIndex(array.indexOf(val))
+	// let index = array.indexOf(val)
+	// if (index < 0) return array;
+	// return [...array.slice(0, index), ...array.slice(index + 1)] // splice alters the source!
+}
+export function removeIndex(array, index) {
+	if (index < 0 || index > array.length) return array;
+	return [...array.slice(0, index), ...array.slice(index + 1)] // splice alters the source!
 }
 
 export function unique(array) {
