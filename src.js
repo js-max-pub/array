@@ -35,10 +35,11 @@ export function last(array) {
 }
 
 
-import { copy } from './object.js'
+// import { copy } from 'https://js.max.pub/object/src.js'
+
 export function shuffle(array) {
-	let a = copy(array)
-	// let a = JSON.parse(JSON.stringify(array)); // deep copy
+	// let a = copy(array)
+	let a = JSON.parse(JSON.stringify(array)); // deep copy
 	for (let i = a.length - 1; i > 0; i--) {
 		const j = Math.floor(Math.random() * (i + 1));
 		[a[i], a[j]] = [a[j], a[i]];
