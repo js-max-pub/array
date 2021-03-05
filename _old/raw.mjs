@@ -4,38 +4,40 @@
 // 	return array.map(x => x.trim());
 // }
 
-export function remove(array, val) {
-	return removeIndex(array.indexOf(val))
-	// let index = array.indexOf(val)
-	// if (index < 0) return array;
-	// return [...array.slice(0, index), ...array.slice(index + 1)] // splice alters the source!
-}
+
 export function removeIndex(array, index) {
 	if (index < 0 || index > array.length) return array;
 	return [...array.slice(0, index), ...array.slice(index + 1)] // splice alters the source!
 }
+export function removeValue(array, value) {
+	return removeIndex(array.indexOf(value))
+}
+
 
 export function unique(array) {
 	return [...new Set(array)]
 }
 
 /**
- * remove empty values like null, undefined, ''
+ * remove null, undefined, NaN
+ * keeps '' and 0 
  * @param array 
  */
 export function clean(array) {
-	return array.filter(x => x);
+	return array.filter(x => ![NaN, undefined, null].includes(x));
 }
 
 
 
-export function first(array, def = '') {
-	return array[0] ?? def;
+export function first(array) {
+	return array[0]
 }
 
-export function last(array, def = '') {
-	return array.slice(-1)[0] ?? def;
+export function last(array) {
+	return array.slice(-1)[0]
 }
+
+
 
 export function shuffle(array) {
 	let a = JSON.parse(JSON.stringify(array)); // deep copy
