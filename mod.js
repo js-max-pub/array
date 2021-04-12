@@ -3,22 +3,32 @@
 
 
 export function removeIndex(array, index) {
+	console.log('array', array)
 	if (index < 0 || index > array.length) return array;
 	return [...array.slice(0, index), ...array.slice(index + 1)] // splice alters the source!
 }
 export function removeValue(array, value) {
-	return removeIndex(array.indexOf(value))
+	return removeIndex(array, array.indexOf(value))
 }
 
-
-export function unique(array) {
-	return [...new Set(array)]
+/**
+ * 
+ * @param {array} array 
+ * @param {string} [property] - (optional) property that shall be unique, e.g. 'id'
+ * @returns 
+ */
+export function unique(array, property) {
+	if (property)
+		return Object.values(Object.fromEntries(array.map(x => [x[property], x])))
+	else
+		return [...new Set(array)]
 }
 
 /**
  * remove null, undefined, NaN
- * keeps '' and 0 
+ * keeps '' and 0 and false
  * @param array 
+ * @returns 
  */
 export function clean(array) {
 	return array.filter(x => ![NaN, undefined, null].includes(x));
@@ -88,7 +98,21 @@ export function cartesian(...a) {
 	return a.filter(x => x.length).reduce((acc, val) => acc.flatMap(d => val.map(e => [d, e].flat())));
 }
 
+export function sortBy(array, property) {
+	return array.sort((a, b) => {
+		if (a[property] > b[property]) return 1
+		if (a[property] < b[property]) return -1
+		return 0
+	})
+}
 
+// export function sortBy(property) {
+// 	return function pathSort(a, b) {
+// 		if (a[property] > b[property]) return 1
+// 		if (a[property] < b[property]) return -1
+// 		return 0
+// 	}
+// }
 
 // export default {
 // 	remove, unique, clean, first, last, shuffle, array, intersection, union, cartesian
