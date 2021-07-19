@@ -1,6 +1,6 @@
 
 
-
+export { extend } from '../object/mod.js'
 
 export function removeIndex(array, index) {
 	console.log('array', array)
