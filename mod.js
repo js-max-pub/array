@@ -70,11 +70,19 @@ export function shuffle(array) {
  */
 export function array(a) {
 	if (!a) return []; // null, undefined, NaN return empty array
+	if (a?.[Symbol.asyncIterator]) {
+		return new Promise(async (resolve, reject) => {
+			let output = []
+			for await (let v of a)
+				output.push(v)
+			resolve(output)
+		})
+	}
 	if (Array.isArray(a)) return a;
 	if (a * 1 == a) return Array(a)
+
 	return Array.from(a);
 }
-
 
 
 export function union(array, other) {
