@@ -90,6 +90,7 @@ export function union(array, other) {
 }
 
 
+
 export function intersection(...arrays) {
 	// if (arrays.length < 2) return [];
 	let output = arrays[0] ?? [];
@@ -97,6 +98,15 @@ export function intersection(...arrays) {
 		output = output.filter(value => a.includes(value))
 	return output;
 }
+
+export function difference(a, b) {
+	a = new Set(a);
+	b = new Set(b);
+	let difference = new Set(
+		[...a].filter(x => !b.has(x)));
+	return [...difference]
+}
+
 
 // https://stackoverflow.com/questions/12303989/cartesian-product-of-multiple-arrays-in-javascript
 export function cartesian(...a) {
