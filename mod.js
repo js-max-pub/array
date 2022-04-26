@@ -13,9 +13,9 @@ export function removeValue(array, value) {
 
 /**
  * 
- * @param {array} array 
- * @param {string} [property] - (optional) property that shall be unique, e.g. 'id'
- * @returns 
+ * @param {array of primitives or objects} array 
+ * @param {string} property - (optional) property that shall be unique, e.g. 'id'
+ * @returns array with unique items
  */
 export function unique(array, property) {
 	if (property)
@@ -36,17 +36,22 @@ export function clean(array) {
 
 
 
-export function first(array) {
-	return array?.[0]
-}
+// export function first(array) {
+// 	return array?.[0]
+// }
 
-export function last(array) {
-	return array?.slice(-1)?.[0]
-}
+// array.at(-1)
+// export function last(array) {
+// 	return array?.slice(-1)?.[0]
+// }
 
 
 // import { copy } from 'https://js.max.pub/object/src.js'
-
+/**
+ * randomly reorder the input array
+ * @param {*} array 
+ * @returns reordered array
+ */
 export function shuffle(array) {
 	// let a = copy(array)
 	let a = JSON.parse(JSON.stringify(array)); // deep copy
@@ -116,14 +121,24 @@ export function cartesian(...a) {
 	return a.filter(x => x.length).reduce((acc, val) => acc.flatMap(d => val.map(e => [d, e].flat())));
 }
 
-export function sortBy(array, property) {
-	return array.sort((a, b) => {
-		if (a[property] > b[property]) return 1
-		if (a[property] < b[property]) return -1
-		return 0
-	})
-}
+// export function sortBy(array, property) {
+// 	return array.sort((a, b) => {
+// 		if (a[property] > b[property]) return 1
+// 		if (a[property] < b[property]) return -1
+// 		return 0
+// 	})
+// }
+// export function compare(a, b) {
+// 	if (a > b) return 1
+// 	if (a < b) return -1
+// 	return 0
+// }
+export const compare = (a, b) => a > b ? 1 : (a < b ? -1 : 0)
+export const sortBy = (a, prop) => a.sort((a, b) => compare(prop(a), prop(b)))
 
+// export function sortBy(array, property) {
+// 	return array.sort((a, b) => compare(property(a), property(b)))
+// }
 // export function sortBy(property) {
 // 	return function pathSort(a, b) {
 // 		if (a[property] > b[property]) return 1

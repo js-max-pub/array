@@ -1,0 +1,412 @@
+[
+  {
+    "kind": "function",
+    "name": "removeIndex",
+    "location": {
+      "filename": "file:///Users/max/GitHub/_js/array/mod.js",
+      "line": 5,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "functionDef": {
+      "params": [
+        {
+          "kind": "identifier",
+          "name": "array",
+          "optional": false,
+          "tsType": null
+        },
+        {
+          "kind": "identifier",
+          "name": "index",
+          "optional": false,
+          "tsType": null
+        }
+      ],
+      "returnType": null,
+      "isAsync": false,
+      "isGenerator": false,
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "function",
+    "name": "removeValue",
+    "location": {
+      "filename": "file:///Users/max/GitHub/_js/array/mod.js",
+      "line": 10,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "functionDef": {
+      "params": [
+        {
+          "kind": "identifier",
+          "name": "array",
+          "optional": false,
+          "tsType": null
+        },
+        {
+          "kind": "identifier",
+          "name": "value",
+          "optional": false,
+          "tsType": null
+        }
+      ],
+      "returnType": null,
+      "isAsync": false,
+      "isGenerator": false,
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "function",
+    "name": "unique",
+    "location": {
+      "filename": "file:///Users/max/GitHub/_js/array/mod.js",
+      "line": 20,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "tags": [
+        {
+          "kind": "param",
+          "name": "array",
+          "type": "array of primitives or objects"
+        },
+        {
+          "kind": "param",
+          "name": "property",
+          "type": "string",
+          "doc": "- (optional) property that shall be unique, e.g. 'id'"
+        },
+        {
+          "kind": "return",
+          "doc": "array with unique items"
+        }
+      ]
+    },
+    "functionDef": {
+      "params": [
+        {
+          "kind": "identifier",
+          "name": "array",
+          "optional": false,
+          "tsType": null
+        },
+        {
+          "kind": "identifier",
+          "name": "property",
+          "optional": false,
+          "tsType": null
+        }
+      ],
+      "returnType": null,
+      "isAsync": false,
+      "isGenerator": false,
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "function",
+    "name": "clean",
+    "location": {
+      "filename": "file:///Users/max/GitHub/_js/array/mod.js",
+      "line": 33,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "remove null, undefined, NaN\nkeeps '' and 0 and false",
+      "tags": [
+        {
+          "kind": "param",
+          "name": "array"
+        },
+        {
+          "kind": "return"
+        }
+      ]
+    },
+    "functionDef": {
+      "params": [
+        {
+          "kind": "identifier",
+          "name": "array",
+          "optional": false,
+          "tsType": null
+        }
+      ],
+      "returnType": null,
+      "isAsync": false,
+      "isGenerator": false,
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "function",
+    "name": "first",
+    "location": {
+      "filename": "file:///Users/max/GitHub/_js/array/mod.js",
+      "line": 39,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "functionDef": {
+      "params": [
+        {
+          "kind": "identifier",
+          "name": "array",
+          "optional": false,
+          "tsType": null
+        }
+      ],
+      "returnType": null,
+      "isAsync": false,
+      "isGenerator": false,
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "function",
+    "name": "last",
+    "location": {
+      "filename": "file:///Users/max/GitHub/_js/array/mod.js",
+      "line": 43,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "functionDef": {
+      "params": [
+        {
+          "kind": "identifier",
+          "name": "array",
+          "optional": false,
+          "tsType": null
+        }
+      ],
+      "returnType": null,
+      "isAsync": false,
+      "isGenerator": false,
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "function",
+    "name": "shuffle",
+    "location": {
+      "filename": "file:///Users/max/GitHub/_js/array/mod.js",
+      "line": 54,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "randomly reorder the input array",
+      "tags": [
+        {
+          "kind": "param",
+          "name": "array",
+          "type": "*"
+        },
+        {
+          "kind": "return",
+          "doc": "reordered array"
+        }
+      ]
+    },
+    "functionDef": {
+      "params": [
+        {
+          "kind": "identifier",
+          "name": "array",
+          "optional": false,
+          "tsType": null
+        }
+      ],
+      "returnType": null,
+      "isAsync": false,
+      "isGenerator": false,
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "function",
+    "name": "array",
+    "location": {
+      "filename": "file:///Users/max/GitHub/_js/array/mod.js",
+      "line": 75,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "create a new array from various inputs\nmore powerful than Array.from()",
+      "tags": [
+        {
+          "kind": "param",
+          "name": "a"
+        }
+      ]
+    },
+    "functionDef": {
+      "params": [
+        {
+          "kind": "identifier",
+          "name": "a",
+          "optional": false,
+          "tsType": null
+        }
+      ],
+      "returnType": null,
+      "isAsync": false,
+      "isGenerator": false,
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "function",
+    "name": "union",
+    "location": {
+      "filename": "file:///Users/max/GitHub/_js/array/mod.js",
+      "line": 92,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "functionDef": {
+      "params": [
+        {
+          "kind": "identifier",
+          "name": "array",
+          "optional": false,
+          "tsType": null
+        },
+        {
+          "kind": "identifier",
+          "name": "other",
+          "optional": false,
+          "tsType": null
+        }
+      ],
+      "returnType": null,
+      "isAsync": false,
+      "isGenerator": false,
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "function",
+    "name": "intersection",
+    "location": {
+      "filename": "file:///Users/max/GitHub/_js/array/mod.js",
+      "line": 98,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "functionDef": {
+      "params": [
+        {
+          "kind": "rest",
+          "arg": {
+            "kind": "identifier",
+            "name": "arrays",
+            "optional": false,
+            "tsType": null
+          },
+          "tsType": null
+        }
+      ],
+      "returnType": null,
+      "isAsync": false,
+      "isGenerator": false,
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "function",
+    "name": "difference",
+    "location": {
+      "filename": "file:///Users/max/GitHub/_js/array/mod.js",
+      "line": 106,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "functionDef": {
+      "params": [
+        {
+          "kind": "identifier",
+          "name": "a",
+          "optional": false,
+          "tsType": null
+        },
+        {
+          "kind": "identifier",
+          "name": "b",
+          "optional": false,
+          "tsType": null
+        }
+      ],
+      "returnType": null,
+      "isAsync": false,
+      "isGenerator": false,
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "function",
+    "name": "cartesian",
+    "location": {
+      "filename": "file:///Users/max/GitHub/_js/array/mod.js",
+      "line": 116,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "functionDef": {
+      "params": [
+        {
+          "kind": "rest",
+          "arg": {
+            "kind": "identifier",
+            "name": "a",
+            "optional": false,
+            "tsType": null
+          },
+          "tsType": null
+        }
+      ],
+      "returnType": null,
+      "isAsync": false,
+      "isGenerator": false,
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "function",
+    "name": "sortBy",
+    "location": {
+      "filename": "file:///Users/max/GitHub/_js/array/mod.js",
+      "line": 123,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "functionDef": {
+      "params": [
+        {
+          "kind": "identifier",
+          "name": "array",
+          "optional": false,
+          "tsType": null
+        },
+        {
+          "kind": "identifier",
+          "name": "property",
+          "optional": false,
+          "tsType": null
+        }
+      ],
+      "returnType": null,
+      "isAsync": false,
+      "isGenerator": false,
+      "typeParams": []
+    }
+  }
+]
